@@ -7,23 +7,71 @@
  dekorace nadpisů #629edb
 */
 
-
 body {
+    background-color: black; /*SEM SI SEM DALA TEN OKRAJ & SEKCI MAIN, AT JE TO HEZKY VIDET*/
+}
+
+main {
     margin: 0;
     padding: 0;
     background-color: #f5f5f5;
     font-family: 'Merriweather', serif;
     font-size: 16px;
     line-height: 1.6;
+    max-width: 500px; /*MAX SIRKA PRO MOBIL*/
+    margin: auto; /*VYCENTROVANI*/
 }
 
+/*Mobilní verze - šířka do 500px
+==============================
+- všechno je pod sebou v jedné úzké nudli
+- v menu jsou položky pod sebou, menu samotné je nad obsahem
+- v galerii jsou všechny obrázky pod sebou
+- popisky k obrázkům jsou vždy pod obrázkem (k těm v textu i k těm v galerii)*/
 
 /* HLAVICKA */
 
-.titulek {
-    font-family: 'Raleway', serif;
+.header {
+    background-image: url(images/island-hlavicka.jpg); 
+    background-size: cover; /*pozadi obrazek pres cely*/
+    color: white;
+    text-align: center; /*text na stred*/
+    max-height: 350px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
 }
 
+.titulek {
+    font-family: 'Raleway', serif;
+    font-size: 50px;
+    position: relative;
+    top: -2rem;
+}
+
+.perex {
+    font-size: 14px; /*to je hezci, pardon*/
+    position: relative;
+    top: -3rem;
+}
+
+.borderka {
+    border-top: 2px solid #c4c3c3; /*ja vim, ze jsem to timhle elementem ocurala a neni to idealni, ale kdyz byla border u objektu autora, tak jsem zaboha neprisla na to, jak udelat kratsi tu carku... vim, ze si to zase komplikuju:D ale vypada to, jak ma, se pocita:)))*/
+    max-width: 5rem;
+    position: relative;
+    top: -2rem;
+    left: 11.5rem;
+}
+
+.autor {
+    font-size: 14px; /*jednodussi nez delat extra tridu pro perex+autor, a 14px je hezci nez 16px*/
+    font-style: italic;
+    color: #c4c3c3;
+
+    margin-top: 1rem;
+    position: relative;
+    top: -2rem;
+}
 
 /* MENU */
 
