@@ -29,6 +29,12 @@ main {
 - v galerii jsou všechny obrázky pod sebou
 - popisky k obrázkům jsou vždy pod obrázkem (k těm v textu i k těm v galerii)*/
 
+main {
+    font-size: 14px; /*to se mi zda vzhledove nejak vic odpovida*/
+}
+
+
+
 /* HLAVICKA */
 /*MOBIL*/
 
@@ -51,7 +57,6 @@ main {
 }
 
 .perex {
-    font-size: 14px; /*to je hezci, pardon*/
     position: relative;
     top: -3rem;
 }
@@ -59,13 +64,13 @@ main {
 .borderka {
     border-top: 2px solid #c4c3c3; /*ja vim, ze jsem to timhle elementem ocurala a neni to idealni, ale kdyz byla border u objektu autora, tak jsem zaboha neprisla na to, jak udelat kratsi tu carku... vim, ze si to zase komplikuju:D ale vypada to, jak ma, se pocita:)))*/
     max-width: 5rem;
+
     position: relative;
     top: -2rem;
     left: 11.5rem;
 }
 
 .autor {
-    font-size: 14px; /*jednodussi nez delat extra tridu pro perex+autor, a 14px je hezci nez 16px*/
     font-style: italic;
     color: #c4c3c3;
 
@@ -87,12 +92,11 @@ main {
 
 .menu a {
     color: #c4c3c3;
-    font-size: 12px;
+    font-family: sans-serif;
     text-transform: uppercase;
     text-decoration: none;
-    max-width: 500px;
-
 }
+
 .menu li {
     border-bottom: 0.5px dotted #c4c3c360; /*borders mezi polozkami menu*/
 }
@@ -103,12 +107,75 @@ main {
 /* OBSAH */
 /*MOBIL*/
 
+.obsah {
+    display: flex; /*to delam kvuli obrazkum, co cestuji*/
+    flex-direction: column;
+}
+.obsah p {
+    /*text-align: justify; /*to je hezci v bloku, pardon, ja jsem na to ujeta*/
+    padding: 0rem 1rem;
+}
 
+.obsah img {
+    flex-wrap: wrap; /*obrazek mezi textem v obsahu nikam nepotece*/
+}
 
+.obsah .popisek {
+    color: grey;
+    font-size: 11px;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+.obsah .popisek a {
+    color: grey;
+}
+
+h2 {
+    font-size: 25px;
+    font-family: sans-serif;
+    margin-left: 1rem;
+}
+.modraborderka { 
+    border-top: 4px solid #629edb;
+    max-width: 15%;
+    margin-bottom: 1rem;
+}
 
 /* FOTOGALERIE */
+.galerie {
+    display: flex;
+    flex-direction: column;
+}
 
+.galerie .foto img {
+    position: relative;
+    left: -2.5rem; /*ja vim, ze to neni ideal, ale ja uz fakt nevim, tak ucel sveti prostredky...*/
+}
 
+.foto img {
+    justify-content:left; /*kdyby nahodou, ne ze by to nekam vytejkalo*/
+    width: 500px; /*jak lepe dam, aby to vychazelo na celou sirku?*/
+}
+
+.galerie .popisek {
+    color: grey;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.galerie .popisek-copy {
+    font-weight: 400;
+    font-size: 11px;
+}
+.galerie .popisek a {
+    color: grey;
+    
+}
 
 
 /* PATICKA */
+/*MOBIL*/
+footer {
+    display: none;
+}
