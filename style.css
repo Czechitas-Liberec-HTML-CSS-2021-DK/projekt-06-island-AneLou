@@ -30,6 +30,7 @@ main {
 - popisky k obrázkům jsou vždy pod obrázkem (k těm v textu i k těm v galerii)*/
 
 /* HLAVICKA */
+/*MOBIL*/
 
 .header {
     background-image: url(images/island-hlavicka.jpg); 
@@ -74,11 +75,33 @@ main {
 }
 
 /* MENU */
+/*MOBIL*/
+
+.menu {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    list-style-type: none; /*li bez kolecek*/
+    padding: 2rem; /*at jsou li borders hezky od kraje*/
+}
+
+.menu a {
+    color: #c4c3c3;
+    font-size: 12px;
+    text-transform: uppercase;
+    text-decoration: none;
+    max-width: 500px;
+
+}
+.menu li {
+    border-bottom: 0.5px dotted #c4c3c360; /*borders mezi polozkami menu*/
+}
 
 
 
 
 /* OBSAH */
+/*MOBIL*/
 
 
 
