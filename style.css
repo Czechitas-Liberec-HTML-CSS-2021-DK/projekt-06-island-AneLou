@@ -11,6 +11,9 @@ body {
     background-color: black; /*SEM SI SEM DALA TEN OKRAJ & SEKCI MAIN, AT JE TO HEZKY VIDET*/
 }
 
+
+/*MOBILLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL*/
+
 main {
     margin: 0;
     padding: 0;
@@ -18,25 +21,16 @@ main {
     font-family: 'Merriweather', serif;
     font-size: 16px;
     line-height: 1.6;
-    max-width: 500px; /*MAX SIRKA PRO MOBIL*/
+    max-width: 500px;
     margin: auto; /*VYCENTROVANI*/
 }
-
-/*Mobilní verze - šířka do 500px
-==============================
-- všechno je pod sebou v jedné úzké nudli
-- v menu jsou položky pod sebou, menu samotné je nad obsahem
-- v galerii jsou všechny obrázky pod sebou
-- popisky k obrázkům jsou vždy pod obrázkem (k těm v textu i k těm v galerii)*/
 
 main {
     font-size: 14px; /*to se mi zda vzhledove nejak vic odpovida*/
 }
 
-
-
 /* HLAVICKA */
-/*MOBIL*/
+
 
 .header {
     background-image: url(images/island-hlavicka.jpg); 
@@ -79,8 +73,8 @@ main {
     top: -2rem;
 }
 
+
 /* MENU */
-/*MOBIL*/
 
 .menu {
     text-align: center;
@@ -105,7 +99,6 @@ main {
 
 
 /* OBSAH */
-/*MOBIL*/
 
 .obsah {
     display: flex; /*to delam kvuli obrazkum, co cestuji*/
@@ -175,7 +168,21 @@ h2 {
 
 
 /* PATICKA */
-/*MOBIL*/
+
 footer {
     display: none;
 }
+
+/*TABLETTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT*/
+/*TABLETOVE VIEW*/
+
+@media screen and (min-width:480px) {
+
+
+} /*konec tablet view*/
+
+/*POCITAC VIEW*/
+@media screen and (min-width: 1000px) {
+
+
+} /*konec pocitac view*/
