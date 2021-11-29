@@ -1,0 +1,356 @@
+/* nejsme vcerejsi, pouzivame moderni box model */
+*, ::after, ::before { box-sizing: border-box; }
+
+/*
+ BARVY
+ pozadi           #f5f5f5
+ dekorace nadpisů #629edb
+*/
+
+body {
+    background-color: black; /*SEM SI SEM DALA TEN OKRAJ & SEKCI MAIN, AT JE TO HEZKY VIDET*/
+}
+
+
+/*MOBILLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL*/
+
+main {
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    font-family: 'Merriweather', serif;
+    font-size: 16px;
+    line-height: 1.6;
+    min-width: 320px;
+
+    margin: auto; /*VYCENTROVANI*/
+}
+
+main {
+    font-size: 14px; /*to se mi zda vzhledove nejak vic odpovida*/
+}
+
+/* HLAVICKA */
+
+
+.header {
+    background-image: url(images/island-hlavicka.jpg); 
+    background-size: cover; /*pozadi obrazek pres cely*/
+    color: white;
+    text-align: center; /*text na stred*/
+    max-height: 350px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: -3rem;
+
+}
+
+.titulek {
+    font-family: 'Raleway', serif;
+    font-size: 50px;
+    position: relative;
+    top: -2rem;
+    margin-bottom: -2rem; /*at je pekne podtim ta linka a jmeno*/
+}
+
+.perex {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.borderka {
+    border-bottom: 2px solid #c4c3c3; /*ja vim, ze jsem to timhle elementem ocurala a neni to idealni, vim, ze si to zase komplikuju:D ale vypada to, jak ma, se pocita:)))*/
+    max-width: 10%;
+    flex-grow: 1;
+    position: relative;
+    bottom: 2rem;
+    left: 45%;
+}
+
+.autor {
+    font-style: italic;
+    color: #c4c3c3;
+    position: relative;
+    text-align:center;
+    margin-top: 1rem;
+    padding-bottom: -2rem;
+    bottom: 2rem;
+    }
+
+
+/* MENU */
+
+.menu {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    list-style-type: none; /*li bez kolecek*/
+    padding: 2rem; /*at jsou li borders hezky od kraje*/
+}
+
+.menu a {
+    color: #c4c3c3;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.menu li {
+    border-bottom: 0.5px dotted #c4c3c360; /*borders mezi polozkami menu*/
+}
+
+
+
+
+/* OBSAH */
+
+.obsah {
+    display: flex; /*to delam kvuli obrazkum, co cestuji*/
+    flex-direction: column;
+}
+.obsah p {
+    /*text-align: justify; /*to je hezci v bloku, pardon, ja jsem na to ujeta*/
+    padding: 0rem 1rem;
+}
+
+.uvodnitext p {
+    padding: 0rem 1rem;
+}
+
+.obsah img {
+    flex-wrap: wrap; /*obrazek mezi textem v obsahu nikam nepotece*/
+}
+
+.obsah .popisek {
+    color: grey;
+    font-size: 11px;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+.obsah .popisek a {
+    color: grey;
+}
+
+h2 {
+    font-size: 25px;
+    font-family: sans-serif;
+    margin-left: 1rem;
+}
+.modraborderka { 
+    border-top: 4px solid #629edb;
+    max-width: 15%;
+    margin-bottom: 1rem;
+}
+
+/* FOTOGALERIE */
+.galerie {
+    display: flex;
+    flex-direction: column;
+}
+
+.galerie img {
+    flex-wrap: wrap; /*proc to nefunguje, kdyz v obsahu to funguje??? ja fakt nevim uz*/
+/*max-width: 600px;
+position: relative;
+left: -2.5rem;*/
+ 
+}
+
+.galerie .popisek {
+    color: grey;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.galerie .popisek-copy {
+    font-weight: 400;
+    font-size: 11px;
+}
+.galerie .popisek a {
+    color: grey;
+    
+}
+
+
+/* PATICKA */
+
+footer {
+    display: none;
+}
+
+/*TABLETTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT*/
+/*TABLETOVE VIEW*/
+
+@media screen and (min-width:600px) {
+    main {
+        margin: 0;
+        padding: 0;
+        background-color: #f5f5f5;
+        font-family: 'Merriweather', serif;
+        font-size: 16px;
+        line-height: 1.6;
+        min-width: 480px;
+        max-width: 999px;
+        margin: auto; /*VYCENTROVANI*/
+    }
+
+        .borderka {
+            top: -2rem;
+        }
+        
+        .autor {
+
+            top: -1.5rem;
+            }
+
+            /* MENU */
+
+.menu {
+    flex-direction: row;
+    justify-content: space-evenly;
+    border: 1px dotted #c4c3c360;
+    padding: 0px 10px;
+    margin-top: 2rem;
+}
+
+.menu li {
+    border-bottom: none;
+    border-right: 1px dotted #c4c3c360;
+    max-width: 25%;
+    text-align: center; /*proc to neni ve stredu?*/
+
+}
+
+.menu .fotogalerijka {
+    border-right: none;
+}
+
+.obsah .popisek {
+    color: white;
+    font-size: 11px;
+    text-align: right;
+    font-family: sans-serif;
+    position: relative;
+    bottom: 2rem;
+}
+
+.obsah .popisek a {
+    color: white;
+}
+
+.galerie .popisek {
+    display: none;
+}
+
+.galerie {
+    flex-direction: row;
+}
+
+.galerie .foto {
+    flex-wrap: wrap;
+}
+        
+
+
+/*FOOTER*/
+footer {
+        display:grid;
+        margin: 0;
+        padding: 1rem;
+        background-color:#e2e0e0;
+        font-family: 'Merriweather', serif;
+        font-size: 16px;
+        line-height: 1.6;
+        min-width: 320px;
+        height: 100px;
+        margin: auto; /*VYCENTROVANI*/
+        color: rgba(128, 128, 128, 0.712);
+        font-size: 12px;
+        max-width: 999px;
+}
+
+footer a {
+    color: rgba(128, 128, 128, 0.712);
+
+}
+
+
+
+} /*konec tablet view*/
+
+/*POCITAC VIEW*/
+@media screen and (min-width: 1000px) {
+
+.header {
+    max-height: 800px;
+    height: 500px;
+}
+
+.titulek {
+    font-size: 90px;
+}
+
+.perex {
+    padding: 0 15%; /*zuzeni textu do prostredka*/
+}
+
+.borderka {
+    top: -7rem;
+}
+
+.autor {
+
+    top: -6rem;
+    }
+
+
+.pcviewobsah {
+    width: 80%;
+    background-color: white;
+    margin-left:15%;
+    display: flex;
+    flex-direction: column;
+    margin-top: -5rem;
+}
+
+.menuauvodnitext {
+    display: flex;
+    flex-direction: row;
+}
+
+.menu {
+
+    display: flex;
+    flex-direction: column;
+    border: none;
+    padding-left: 2rem;
+    padding-top: 2rem; /*srovnani pocatecni vysky s uvodnim textem*/
+    justify-content: flex-start; /*seradi menu pod sebou nahore*/
+}
+
+.menu li {
+    border-bottom: 1px dotted #c4c3c360;
+    border-right: none;
+    padding: 5px 10px;
+    text-align: left; 
+    font-size: 14px;
+    width: 180px;
+    max-width: 100%;
+}
+
+.uvodnitext {
+    padding: 2rem 1rem;
+}
+
+footer {
+padding: 0% 10%;
+background-color: #f5f5f5;
+
+}
+
+} /*konec pocitac view*/
