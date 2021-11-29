@@ -150,16 +150,23 @@ h2 {
 /* FOTOGALERIE */
 .galerie {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /*proc toto nefunguje*/
+    flex-wrap: wrap;
 }
 
 .galerie img {
-    flex-wrap: wrap; /*proc to nefunguje, kdyz v obsahu to funguje??? ja fakt nevim uz*/
-/*max-width: 600px;
-position: relative;
-left: -2.5rem;*/
+ /*proc to nefunguje, kdyz v obsahu to funguje??? ja fakt nevim uz*/
+    /*max-width: 100px;*/
+    width: 100%;
  
 }
+
+figure {
+    margin: 0;
+    padding: 0;
+}
+
+
 
 .galerie .popisek {
     color: grey;
