@@ -63,7 +63,7 @@ main {
 }
 
 .borderka {
-    border-bottom: 2px solid #c4c3c3; /*ja vim, ze jsem to timhle elementem ocurala a neni to idealni, vim, ze si to zase komplikuju:D ale vypada to, jak ma, se pocita:)))*/
+    border-bottom: 2px solid #c4c3c3; /*ja vim, ze jsem to timhle elementem ocurala a neni to idealni, vim, ze si to zase komplikuju:D ale vypada to cca, jak ma, se pocita:)))*/
     max-width: 10%;
     flex-grow: 1;
     position: relative;
@@ -78,7 +78,7 @@ main {
     text-align:center;
     margin-top: 1rem;
     padding-bottom: -2rem;
-    bottom: 2rem;
+    bottom: 1.5rem;
     }
 
 
@@ -215,21 +215,30 @@ footer {
             top: -1.5rem;
             }
 
-            /* MENU */
+/* MENU */
 
 .menu {
     flex-direction: row;
     justify-content: space-evenly;
-    border: 1px dotted #c4c3c360;
+    border-top: 1px dotted #c4c3c360;
+    border-bottom: 1px dotted #c4c3c360;
     padding: 0px 10px;
     margin-top: 2rem;
+    
 }
 
 .menu li {
     border-bottom: none;
     border-right: 1px dotted #c4c3c360;
+    padding-right: 2rem;
     max-width: 25%;
-    text-align: center; /*proc to neni ve stredu?*/
+    /*white-space: nowrap; /*at to nezalamuje proc jet na island ----- na to kaslu, to je responzivnejsi zalamovany, obetuju malicko krasy citelnosti*/
+
+}
+
+.menu li a {
+    text-align: center;
+
 
 }
 
@@ -338,7 +347,6 @@ footer a {
 }
 
 .menu {
-
     display: flex;
     flex-direction: column;
     border: none;
@@ -370,9 +378,9 @@ footer a {
     margin-right: 0;
 }
 
-
+/*ty bjutiful pruhledne komenty na obrazcich*/
 .galerie img:hover + .popisek {
-    display:block;
+    display: block;
     color: rgba(255, 255, 255, 0.904);
     text-align: center;
     background-color:rgba(0, 0, 0, 0.589);
@@ -381,7 +389,6 @@ footer a {
     margin-bottom: -5rem;
     position: relative;
     bottom: 3.7rem;
-
 }
 
 
@@ -394,3 +401,32 @@ margin-top: -1rem;
 }
 
 } /*konec pocitac view*/
+
+
+
+/*VIEW NA EXTRA MINI TELEFONKY, CO SE VEJDOU DO KAPSY .... jdu s responzivitou az za hrob*/
+
+@media screen and (max-width: 470px) {
+.borderka {
+    border-bottom: 2px solid #c4c3c3; /*ja vim, ze jsem to timhle elementem ocurala a neni to idealni, vim, ze si to zase komplikuju:D ale vypada to cca, jak ma, se pocita:)))*/
+    max-width: 10%;
+    flex-grow: 1;
+    position: relative;
+    bottom: 2rem;
+    left: 45%;
+}
+
+.perex {
+    font-size: 12px;
+}
+.autor {
+    font-style: italic;
+    color: #c4c3c3;
+    position: relative;
+    text-align:center;
+    margin-top: 1rem;
+    padding-bottom: -2rem;
+    bottom: 1rem;
+    white-space: nowrap;
+    }
+} /*konec minitelefonkoveho view*/
